@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
-    <title>Pixie Template - About Page</title>
-
-    <!-- Bootstrap core CSS -->
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sty.css">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<title>WhatsApp Message Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="Harish Rohilla">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/formStyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/appform.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
@@ -23,85 +18,161 @@
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/flex-slider.css">
-<!--
-Tooplate 2114 Pixie
-https://www.tooplate.com/view/2114-pixie
--->
-  </head>
 
-  <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-      <div class="container">
-        <a class="navbar-brand" href="#"><img style="width: 50px; height: 50px; border-radius: 20px;" src="https://toppng.com/uploads/preview/vimeo-v-logo-11609381502pdgdop5xuz.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto"  style="margin-top: 20px;">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Page Content -->
-    <div>
-      <form>
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    
-        <label for="fname">Product Name</label>
-        <input type="text" id="pname" name="productname" placeholder="Product name..">
+<style>
+body {
+    font-family: sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: #2f2f2f;
+    background-color: #fdfdfc;
+}
+</style>
 
-        <label for="service">Product Size</label>
-    		<select class="js-select2" id="size" name="service">
-							<option>Please chooses</option>
-							<option>Medium</option>
-							<option>Small</option>
-							<option>Large</option>
-							<option>Extra-Large</option>
-				</select>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+		<div class="container">
+		  <a class="navbar-brand" href="#"><img style="width: 50px; height: 50px; border-radius: 20px;" src="https://toppng.com/uploads/preview/vimeo-v-logo-11609381502pdgdop5xuz.png" alt=""></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item">
+				<a class="nav-link" href="index.html">Home</a>
+			  </li>
+			  <li class="nav-item active">
+				<a class="nav-link" href="products.html">Products
+				  <span class="sr-only">(current)</span>
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="about.html">Order Here</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="contact.html">Contact Us</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
 
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="india">India</option>
-          <option value="nigeria">Nigeria</option>
-          <option value="canada">Canada</option>
-        </select>
-       
-        <label for="pnum">Phone Number</label>
-        <input type="number" id="pnum" name="phonenumber" placeholder="Your phonenumber..">
-  
-      
-        <button class="but" type="submit" id="submit" >Submit</button>
-      </form>
-    </div>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-    <script src="app.js"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
+<div align="center">
+<h2 style="color: #25b923;font-size: 45px;margin-top: 25px;">
+    <i class="fa fa-whatsapp" style="font-size:50px;padding:5px;"></i>Order Here</h2>
+</div>
+
+<div class="whatsappForm">
+	
+	<form id="whatsAppAnyForm" class="whatsappFormCls" action="" method="POST" data-title="WhatsApp Demo Contact Form" novalidate>
+		<div id="whatsappFormResponse"></div>
+        <div class="whatsappFormRow">
+			<div class="label">Name <span>*</span></div>
+			<input type="text" id="name" name="name" class="whatsappForm-input" placeholder="Name" required>
+		</div>
+        
+        <div class="whatsappFormRow">
+			<div class="label">
+                Email <span>*</span> 
+			</div>
+			<input type="text" id="useremail" name="useremail" class="whatsappForm-input" placeholder="Your Email" required>
+		</div>
+        
+        <div class="whatsappFormRow">
+			<div class="label">Phone</div>
+			<input type="number" id="phonenumber" name="phonenumber" class="whatsappForm-input" placeholder="Phone Number" required>
+		</div>
+        
+		<div class="whatsappFormRow">
+			<div class="label">Product Name <span>*</span></div>
+			<input type="text" id="pruductname" name="productname" class="whatsappForm-input" placeholder="Product Name" required>
+		</div>
+
+		<div class="whatsappFormRow">
+			<div class="label">Product Size<span>*</span></div>
+			<select id="Productsize" name="service" class="whatsappForm-input" placeholder="Service" required>
+				<option value="Small">Small</option>
+				<option value="Medium">Medium</option>
+				<option value="Large">Large</option>
+				<option value="Extra Large">Extra Large</option>
+			</select>
+		</div>
+
+		<div class="whatsappFormRow">
+		  <div class="label">Gender <span>*</span></div>
+		   <div class="row-value">
+			<div class="radioselection">
+				<span class="radio">
+					<span class="radiolabel">Male</span>
+					<input type="radio" id="gender" name="gender" value="Male" class="whatsappForm-select" placeholder="Gender" required />
+					
+				</span>
+				<span class="radio">
+					<span class="radiolabel">Female</span>
+					<input type="radio" id="gender" name="gender" value="Female" class="whatsappForm-select" placeholder="Gender" required />
+					
+				</span>
+			</div>
+		</div>
+
+		</div>
+
+		<div class="whatsappFormRow">
+			<div class="label">How did you hear about us?</div>
+
+			<div class="row-value">
+				<div class="checkboxes">
+					<span class="checkbox">
+						<span class="checkbox-label">Social Media</span>
+						<input type="checkbox" name="checkbox_options" id="checkbox_options" class="whatsappForm-select" value="Social Media" placeholder="How did you hear about us?" />
+						
+					</span>
+
+					<span class="checkbox">
+						<span class="checkbox-label">Others</span>
+						<input type="checkbox" name="checkbox_options" id="checkbox_options" class="whatsappForm-select" value="Others" placeholder="How did you hear about us?" />
+						
+					</span>
+				</div>
+			</div>		
+		</div>
+		
+		<div class="whatsappFormRow">
+			<div class="label">Home Shipping Address with Plot-Number</div>
+			<textarea id="Address" rows="3" name="Address" class="whatsappForm-textarea">
+			</textarea>
+		</div>
+
+        <div class="whatsappFormRow" align="center">
+				<button type="Submit" id="whatsappFormSubmit"><i class="fa fa-whatsapp" style="font-size:20px;padding:5px;"></i>Submit via WhatsApp</button>
+				
+				
+		</div>
+	
+	</form>
+</div>  
+</body>
+
+<script>
+(function($){
+        "use strict";
+			$('#whatsAppAnyForm').appPlugin( 
+				{
+					whatsappPhone: '+919938909469', // Your Whatsapp Number, on which you want to send message.
+					submissionMessage: 'You have been redirected to the WhatsApp to submit the message. Thank you.' // form submission message
+				});	
+})(jQuery);
+</script>
+<script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Additional Scripts -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/owl.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/flex-slider.js"></script>
 
 
     <script language = "text/Javascript"> 
@@ -115,7 +186,5 @@ https://www.tooplate.com/view/2114-pixie
       }
     </script>
 
-
-  </body>
 
 </html>
